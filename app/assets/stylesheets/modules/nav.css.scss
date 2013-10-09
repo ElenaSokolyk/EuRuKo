@@ -1,0 +1,50 @@
+nav { 
+  background-color: white;
+  // @include pie-clearfix;
+
+  .wrapper {
+    @include outerRow;
+    
+    #small-logo {
+      .img {
+        background: image-url("logo-small.png") left no-repeat;
+        height: 41px;
+        margin: 10px 0 6px;
+
+      }
+      @include column(2);
+    }
+    
+    #links {
+      float: right;
+      @include column(9);
+
+      a {
+        text-decoration: none;
+        color: black;
+        @include adjust-font-size-to($tiny-font-size);
+        padding-left: 1.5%;
+        padding-right: 1.5%;
+        position: relative;
+        @include inline-block;
+        @include padding-trailer;
+        @include padding-leader;
+        float: left;
+        font-family: 'Nexa Bold';
+
+        &:hover, &.active {
+      
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            width: 100%;
+            left: 0;
+            height: 3px;
+            background-color: $orange;
+          }
+        }
+      }
+    }
+  }
+}
