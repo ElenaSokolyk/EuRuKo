@@ -1,7 +1,17 @@
 @import "compass";
 @import "foundation-grid";
+@import "fonts";
+
+$base-font-size: 14px;
+$base-line-height: 20px;
+$big-font-size: 30px;
+$large-font-size: 40px;
+$tiny-font-size: 12px;
+$orange: #e9724d;
 
 @include global-reset;
 @include establish-baseline;
 
 @import "layout";
+@import "modules/main_page";
+@import "modules/nav";
