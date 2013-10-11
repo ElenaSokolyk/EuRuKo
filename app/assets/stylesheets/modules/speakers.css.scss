@@ -1,0 +1,79 @@
+#speakers {
+  background-color: $salmon;
+
+  .content {
+    @include outerRow;
+    @include padding-leader;
+
+    header {
+      color: white;
+      text-align: center;
+      @include adjust-font-size-to($medium-font-size);
+      font-family: 'Sansation_Regular';
+      font-weight: bold;
+      @include margin-trailer;
+    }
+
+    .speaker {
+      @include margin-trailer(2);
+      @include pie-clearfix;
+
+      .photo {
+        @include column(3);
+        padding-left: 30px;
+        @include margin-leader(2);
+        .img {
+          background: image-url("matz.png") no-repeat;
+          width: 144px;
+          height: 144px;
+          @include border-radius(75px);
+        }
+      }
+
+      .description {
+        @include column(9);
+        font-family: "Casper";
+
+        .name {
+          color: darken($text-color, 10%);
+          @include adjust-font-size-to($name-font-size,1);
+        }
+
+        .position {
+          color:white;
+          @include adjust-font-size-to($name-font-size,2);
+        }
+
+        .text {
+          color: $text-color;
+          @include adjust-font-size-to($text-font-size);
+        }
+
+        .social_network {
+          padding-right: 15px;
+          @include inline-block;
+          .nickname {
+            color: white;
+            @include adjust-font-size-to($name-font-size);
+            @include inline-block;
+            font-weight: bold;
+          }
+
+          .bird {
+            background: image-url("twitter.png") no-repeat;
+            height: 20px;
+            width: 20px;
+            @include inline-block;
+          }
+
+         .octocat {
+            background: image-url("octocat.png") no-repeat;
+            height: 20px;
+            width: 22px;
+            @include inline-block;
+          }
+        }
+      }
+    }
+  }
+}
