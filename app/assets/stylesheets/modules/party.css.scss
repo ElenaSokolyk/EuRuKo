@@ -1,0 +1,50 @@
+#party {
+  background: image-url("kyiv.jpg");
+  @include background-size(100% 100%);
+  @include padding-trailer(6);
+  @include padding-leader;
+
+  .content {
+    text-align: center;
+
+    header {
+      color: white;
+      @include adjust-font-size-to($medium-font-size);
+      font-family: 'Sansation_Regular', sans-serif;
+      font-weight: bold;
+      @include margin-trailer;
+    }
+
+    .title {
+      font-family: 'Nexa Bold', sans-serif;
+      color: white;
+      @include adjust-font-size-to($huge-font-size);
+      @include margin-trailer;
+      @include margin-leader;
+    }
+
+    .description {
+      font-family: 'Nexa Bold', sans-serif;
+      @include adjust-font-size-to($big-font-size);
+      color: white;
+      @include margin-trailer;
+    }
+
+    button {
+      background-color: rgba(168,162,129,0.5);
+      border: none;
+      outline: none;
+      padding: 20px;
+      @include border-radius(10px);
+      @include adjust-font-size-to($big-font-size);
+      color: white;
+
+      &:hover {
+        background-color: #58beb1;
+      }
+      &:active {
+        @include box-shadow(gray 0 5px 5px 1px inset);
+      }
+    }
+  }
+}

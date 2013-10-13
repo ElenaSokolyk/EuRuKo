@@ -23,13 +23,19 @@
       @include padding-trailer(0.5);
       color: lighten(black, 20%);
 
-      &.colored {
-        background-color: $green;
+      &:first-of-type:hover {
+        background-color: $pale;
       }
 
+      &:hover {
+        background-color: $green;
+      }
       &.white {
-        background-color: white;
         @include adjust-font-size-to($text-font-size);
+      }
+
+      &:hover + .white {
+        background-color: white;
       }
 
       .day {
@@ -50,6 +56,5 @@
         }
       }
     }
-    
   }
 }
