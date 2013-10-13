@@ -29,7 +29,7 @@ nav {
         @include padding-trailer;
         @include padding-leader;
         float: left;
-        font-family: 'Nexa Bold';
+        font-family: 'Nexa Bold',sans-serif;
 
         &:hover, &.active {
       

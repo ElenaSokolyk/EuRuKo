@@ -10,7 +10,7 @@ body {
       color: white;
       @include adjust-font-size-to($large-font-size);
       text-align: right;
-      font-family: 'Nexa Bold';
+      font-family: 'Nexa Bold', sans-serif;
     }
 
     #big-logo {
@@ -28,7 +28,7 @@ body {
       @include adjust-font-size-to($big-font-size);
       text-align: center;
       color: white;
-      font-family:'Sansation_Regular';
+      font-family:'Sansation_Regular', sans-serif;
     }
   }
 }

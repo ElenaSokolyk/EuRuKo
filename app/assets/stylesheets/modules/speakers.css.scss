@@ -9,7 +9,7 @@
       color: white;
       text-align: center;
       @include adjust-font-size-to($medium-font-size);
-      font-family: 'Sansation_Regular';
+      font-family: 'Sansation_Regular', sans-serif;
       font-weight: bold;
       @include margin-trailer;
     }
@@ -32,7 +32,7 @@
 
       .description {
         @include column(9);
-        font-family: "Casper";
+        font-family: "Casper", sans-serif;
 
         .name {
           color: darken($text-color, 10%);
