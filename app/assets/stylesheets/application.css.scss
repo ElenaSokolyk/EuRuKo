@@ -17,6 +17,8 @@ $salmon: #f17c71;
 $text-color: #626262;
 $pale: #ebebeb;
 $green: #bbeade;
+$dark-blue: #353949;
+$coral: #fba466;
 
 @include global-reset;
 @include establish-baseline;
@@ -27,3 +29,4 @@ $green: #bbeade;
 @import "modules/speakers";
 @import "modules/schedule";
 @import "modules/party";
+@import "modules/venue";

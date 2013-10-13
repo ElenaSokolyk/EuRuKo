@@ -1,0 +1,37 @@
+#venue {
+  background-color: $dark-blue;
+  @include padding-trailer(3);
+
+  .content {
+    @include outerRow;
+    @include padding-leader;
+
+    header {
+      color: white;
+      text-align: center;
+      @include adjust-font-size-to($medium-font-size);
+      font-family: 'Sansation_Regular',sans-serif;
+      font-weight: bold;
+      @include margin-trailer;
+    }
+
+    .text {
+      background-color: $coral;
+      padding: 30px;
+      @include column(7);
+      @include adjust-font-size-to($name-font-size,1);
+      font-family: 'Casper',sans-serif;
+      color: $dark-blue;
+      height: 304px;
+      p {
+        @include margin-trailer(1);
+      }
+    }
+
+    .map {
+      @include column(5);
+      background-image: image-url("map.jpg");
+      height: 304px;
+    }
+  }
+}
