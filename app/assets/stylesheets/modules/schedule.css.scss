@@ -1,0 +1,55 @@
+#schedule {
+  background-color: $pale;
+  @include padding-trailer(4);
+
+  .content {
+    @include outerRow;
+    @include padding-leader;
+
+    header {
+      color: darken($text-color, 20%);
+      text-align: center;
+      @include adjust-font-size-to($medium-font-size);
+      font-family: 'Sansation_Regular',sans-serif;
+      font-weight: bold;
+      @include margin-trailer;
+    }
+    .line {
+      @include column(12);
+      font-family: 'Casper',sans-serif;
+      @include adjust-font-size-to($schedule-font-size);
+      border-bottom: 3px solid darken($green, 20%);
+      @include padding-leader(0.5);
+      @include padding-trailer(0.5);
+      color: lighten(black, 20%);
+
+      &.colored {
+        background-color: $green;
+      }
+
+      &.white {
+        background-color: white;
+        @include adjust-font-size-to($text-font-size);
+      }
+
+      .day {
+        @include column(5);
+        color: $orange;
+        @include adjust-font-size-to($medium-font-size,2,$schedule-font-size);
+      }
+
+      .time {
+        @include column(2);
+        text-align: center;
+      }
+
+      .text {
+        @include column(5);
+        .title {
+          color: $orange;
+        }
+      }
+    }
+    
+  }
+}

@@ -9,10 +9,13 @@ $large-font-size: 40px;
 $tiny-font-size: 12px;
 $text-font-size: 16px;
 $name-font-size: 18px;
+$schedule-font-size: 20px;
 $medium-font-size: 25px;
 $orange: #e9724d;
 $salmon: #f17c71;
 $text-color: #626262;
+$pale: #ebebeb;
+$green: #bbeade;
 
 @include global-reset;
 @include establish-baseline;
@@ -21,3 +24,4 @@ $text-color: #626262;
 @import "modules/main_page";
 @import "modules/nav";
 @import "modules/speakers";
+@import "modules/schedule";
