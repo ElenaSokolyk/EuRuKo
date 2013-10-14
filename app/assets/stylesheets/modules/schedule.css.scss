@@ -27,17 +27,26 @@
         background-color: $pale;
       }
 
+      &.with-text {
+        padding: 0;
+        .header, .white { 
+          @include pie-clearfix; 
+          @include padding-trailer(0.5);
+          @include padding-leader(0.5);
+        }
+        .white {
+          @include adjust-font-size-to($text-font-size, 1, $schedule-font-size);
+        }
+      }
+      &.with-text:hover {
+        .header { background-color: $green; }
+        .white { background-color: $light-white; }
+      }
+
       &:hover {
         background-color: $green;
       }
-      &.white {
-        @include adjust-font-size-to($text-font-size);
-      }
-
-      &:hover + .white {
-        background-color: white;
-      }
-
+      
       .day {
         @include column(5);
         color: $orange;
