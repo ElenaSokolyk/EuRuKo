@@ -56,7 +56,6 @@
             color: white;
             @include adjust-font-size-to($name-font-size);
             @include inline-block;
-            font-weight: bold;
           }
 
           .bird {
