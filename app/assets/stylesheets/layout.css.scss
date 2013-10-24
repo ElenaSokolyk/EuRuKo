@@ -1,3 +1,18 @@
 *, *:before, *:after {
   @include box-sizing(border-box);
 }
+
+.content {
+  @include outerRow;
+  @include padding-leader;
+  @include padding-trailer(3);
+
+  header {
+    color: white;
+    text-align: center;
+    @include adjust-font-size-to($medium-font-size);
+    font-family: 'Sansation_Regular', sans-serif;
+    font-weight: bold;
+    @include margin-trailer;
+  }
+}

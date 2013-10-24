@@ -6,14 +6,7 @@
 
   .content {
     text-align: center;
-
-    header {
-      color: white;
-      @include adjust-font-size-to($medium-font-size);
-      font-family: 'Sansation_Regular', sans-serif;
-      font-weight: bold;
-      @include margin-trailer;
-    }
+    width: auto;
 
     .title {
       font-family: 'Nexa Bold', sans-serif;
@@ -31,7 +24,7 @@
     }
 
     button {
-      background-color: rgba(168,162,129,0.5);
+      background-color: $sponsor-btn-color;
       border: none;
       outline: none;
       padding: 20px;
@@ -40,10 +33,10 @@
       color: white;
 
       &:hover {
-        background-color: #58beb1;
+        background-color: $tide;
       }
       &:active {
-        @include box-shadow(gray 0 5px 5px 1px inset);
+        @include box-shadow(darken($tide, 10%) 0 5px 5px 1px inset);
       }
     }
   }

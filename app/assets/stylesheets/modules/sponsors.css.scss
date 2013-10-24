@@ -1,0 +1,229 @@
+#sponsors {
+  background-color: $tide;
+  color: white;
+  font-family: 'Casper';
+
+  .text {
+    @include adjust-font-size-to($schedule-font-size,1.3);
+    @include column(10,center);
+    text-align: center;
+    @include margin-trailer; 
+  } 
+
+  #gaia {
+    .wrapper {
+      @include pie-clearfix;
+      @include margin-trailer; 
+    }
+  }
+  .arrow-block {
+    height: 220px;
+    width: 50%;
+    background-color: $turquoise;
+    position: relative;
+    z-index: 2;
+    float: left;
+    @include padding-leader;
+    padding-left: 10px;
+
+    .img img{
+      width: 300px;
+      height: 121px;
+    }
+
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 35px solid $turquoise;
+      border-top: 110px solid $tide;
+      border-bottom: 110px solid $tide;
+      position: absolute;
+      right: 0px;
+      top: 0;
+    }
+  }
+
+  .right-text-block {
+    height: 220px;
+    width: 50%;
+    background-color: $turquoise;
+    position: relative;
+    float: right;
+    z-index: 1;
+    padding: 15px 5px 10px 55px;
+    color: $gray;
+    @include adjust-font-size-to($name-font-size,1);
+    text-align: left;
+
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 35px solid $tide;
+      border-top: 110px solid $turquoise;
+      border-bottom: 110px solid $turquoise;
+      position: absolute;
+      top: 0;
+      left: 0px;
+    }
+  }
+
+  .right-arrow-block {
+    height: 220px;
+    width: 50%;
+    background-color: $turquoise;
+    position: relative;
+    float: right;
+    z-index: 2; 
+    padding: 45px;
+
+    &:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-right: 35px solid $turquoise;
+      border-top: 110px solid $tide;
+      border-bottom: 110px solid $tide;
+      position: absolute;
+      left: -35px;
+      top: 0;
+    }
+  }
+
+  .text-block {
+    @include column(6);
+    height: 220px;
+    width: 50%;
+    background-color: $turquoise;
+    position: relative;
+    z-index: 1; 
+    padding: 15px 70px 10px 20px;
+    color: $gray;
+    @include adjust-font-size-to($name-font-size,1);
+    text-align: left;
+
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-right: 35px solid $tide;
+      border-top: 110px solid $turquoise;
+      border-bottom: 110px solid $turquoise;
+      position: absolute;
+      right: 35px;
+      top: 0;
+    }
+  }
+
+
+  .title  {
+    @include adjust-font-size-to($large-font-size,5);
+  }
+
+  .helios {
+    .grid {
+      @include block-grid(4,20px,20px);
+
+      &.additional {
+        .block {
+          @include adjust-font-size-to($schedule-font-size,1);
+          color: $gray;
+          text-align: center;
+          height: 45px;
+          @include margin-trailer(1.2);
+          padding: 25px 0;
+
+          &:after {
+            top: 45px;
+          }
+        }
+
+        .text {
+          height: 140px;
+          padding: 50px 25px;
+        }
+      }
+      li {
+        white-space: normal;
+
+        .block {
+          height: 150px;
+          background-color: $turquoise;
+          position: relative;
+          z-index: 2; 
+          @include margin-trailer(2);
+          padding: 30px;
+
+          &:after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-right: 113px solid $tide;
+            border-left: 113px solid $tide;
+            border-top: 40px solid $turquoise;
+            position: absolute;
+            left: 0px;
+            top: 150px;
+          }
+        }
+
+        .text {
+          z-index: 1; 
+          padding: 60px 10px 20px 20px;
+          color: $gray;
+          @include adjust-font-size-to($name-font-size,1);
+          text-align: left;
+          background-color: $turquoise;
+          position: relative;
+          width: 100%;
+
+          &:after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 35px solid $tide;
+            border-right: 110px solid $turquoise;
+            border-left: 110px solid $turquoise;
+            position: absolute;
+            left: 0px;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  ul.selene-grid {
+    @include block-grid(4,20px,20px); 
+
+    li {
+      height: 160px;
+      .container {
+        background-color: $turquoise;
+        text-align: center;
+        @include adjust-font-size-to(20px, 9);
+        width: 100%;
+        height: 100%
+      }
+    }
+  }
+
+  ul.aphrodite {
+    @include block-grid(6,20px,20px); 
+
+    li {
+      height: 130px;
+      .container {
+        background-color: $turquoise;
+        text-align: center;
+        @include adjust-font-size-to(20px, 7);
+        width: 100%;
+        height: 100%;
+        .garage img {margin-top: 5px;}
+        .workable img {margin-top: 15px;}
+      }
+    }
+  }
+}
+

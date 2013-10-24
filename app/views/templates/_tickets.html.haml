@@ -1,0 +1,32 @@
+.content
+  %header TICKETS
+  .text The ticket's price is 60 €. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magtna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo constequat.
+  .block
+    %table
+      %tr
+        %th Category
+        %th.center Number
+        %th.right Price
+        %th.right Amount
+      %tr
+        %td Individual
+        %td.center
+          %input{type: "number"}
+        %td.right 60 €
+        %td.right $ 0.00
+      %tr
+        %td 
+        %td 
+        %td 
+        %td.right Ticket price $ 0.00
+    .btn-block
+      .info Click here to enter a promotion code
+      %button Next step >>
+      .img= image_tag "cards.png"
+    .lock
+      = image_tag "lock.jpg"
+      %span
+        Your data is being transmitted via 
+        %span SSL encryption
+        , stored securely on our systems and handled confidentialy.
+        %a{href: "#"} View SSL certificate

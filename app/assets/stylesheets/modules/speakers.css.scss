@@ -1,76 +1,62 @@
 #speakers {
   background-color: $salmon;
 
-  .content {
-    @include outerRow;
-    @include padding-leader;
+  .speaker {
+    @include margin-trailer(2);
+    @include pie-clearfix;
 
-    header {
-      color: white;
-      text-align: center;
-      @include adjust-font-size-to($medium-font-size);
-      font-family: 'Sansation_Regular', sans-serif;
-      font-weight: bold;
-      @include margin-trailer;
+    .photo {
+      @include column(3);
+      padding-left: 30px;
+      @include margin-leader(2);
+      .img {
+        background: image-url("matz.png") no-repeat;
+        width: 144px;
+        height: 144px;
+        @include border-radius(75px);
+      }
     }
 
-    .speaker {
-      @include margin-trailer(2);
-      @include pie-clearfix;
+    .description {
+      @include column(9);
+      font-family: "Casper", sans-serif;
 
-      .photo {
-        @include column(3);
-        padding-left: 30px;
-        @include margin-leader(2);
-        .img {
-          background: image-url("matz.png") no-repeat;
-          width: 144px;
-          height: 144px;
-          @include border-radius(75px);
-        }
+      .name {
+        color: darken($text-color, 10%);
+        @include adjust-font-size-to($name-font-size,1);
       }
 
-      .description {
-        @include column(9);
-        font-family: "Casper", sans-serif;
+      .position {
+        color:white;
+        @include adjust-font-size-to($name-font-size,2);
+      }
 
-        .name {
-          color: darken($text-color, 10%);
-          @include adjust-font-size-to($name-font-size,1);
-        }
+      .text {
+        color: $text-color;
+        @include adjust-font-size-to($text-font-size);
+      }
 
-        .position {
-          color:white;
-          @include adjust-font-size-to($name-font-size,2);
-        }
-
-        .text {
-          color: $text-color;
-          @include adjust-font-size-to($text-font-size);
-        }
-
-        .social_network {
-          padding-right: 15px;
+      .social_network {
+        padding-right: 15px;
+        @include inline-block;
+        .nickname {
+          color: white;
+          @include adjust-font-size-to($name-font-size);
           @include inline-block;
-          .nickname {
-            color: white;
-            @include adjust-font-size-to($name-font-size);
-            @include inline-block;
-          }
+        }
 
-          .bird {
-            background: image-url("twitter.png") no-repeat;
-            height: 20px;
-            width: 20px;
-            @include inline-block;
-          }
+        .bird {
+          background: image-url("twitter.png") no-repeat;
+          height: 20px;
+          width: 20px;
+          @include inline-block;
+        }
 
-         .octocat {
-            background: image-url("octocat.png") no-repeat;
-            height: 20px;
-            width: 22px;
-            @include inline-block;
-          }
+       .octocat {
+          background: image-url("octocat.png") no-repeat;
+          height: 20px;
+          width: 22px;
+          @include inline-block;
         }
       }
     }

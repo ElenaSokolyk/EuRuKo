@@ -1,0 +1,18 @@
+#about {
+  background-color: $blue;
+
+  .text {
+    font-family: "Casper",sans-serif;
+    @include adjust-font-size-to(19px,1.2);
+    @include column(8);
+    color: $gray;
+
+    span {
+      font-weight: bold;
+    }
+
+    p {
+      @include margin-trailer;
+    }
+  }
+}

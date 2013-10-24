@@ -1,0 +1,45 @@
+#guide {
+  background-color: $guide-color;
+
+  .grid {
+    @include block-grid(4);
+    font-family: "Casper", sans-serif;
+
+    li {
+      text-align: center;
+
+      & + li {
+        border-left: 3px solid $coral;
+      }
+
+      .title {
+        color: white;
+        background-color: $coral;
+        @include padding-leader(0.5);
+        @include padding-trailer(0.5);
+      }
+
+      .all {
+        @include padding-leader(0.5);
+        @include padding-trailer(0.5);
+
+        .item {
+          @include padding-leader(0.4);
+          @include padding-trailer(0.4);
+          color: lighten($guide-color, 30%);
+
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    } 
+
+    li.url {
+      .all {
+        padding-left: 25px;
+        text-align: left;
+      }
+    }
+  }
+}

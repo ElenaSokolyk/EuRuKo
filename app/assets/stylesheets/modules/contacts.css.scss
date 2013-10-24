@@ -1,0 +1,119 @@
+#contacts {
+  background-color: $pink;
+  color: white;
+  font-family: "Casper", sans-serif;
+
+  .left {
+    @include column(5);
+    float: left;
+
+    .email {
+      @include adjust-font-size-to($schedule-font-size,1.2);
+
+      span {
+        color: $yellow;
+      }
+    }
+
+    .subscribe {
+      @include adjust-font-size-to($schedule-font-size);
+      @include margin-trailer;
+      @include margin-leader;
+
+      input {
+        border: 1px solid white;
+        padding: 8px;
+        @include border-radius(5px);
+        color: lighten(gray, 30%);
+        font-family: "Casper", sans-serif;
+        @include margin-trailer(0.5);
+        @include adjust-font-size-to($schedule-font-size,1,$schedule-font-size);
+
+        &:focus {
+          border: 1px solid $tide;
+          color: gray;
+        }
+      }
+
+      .subscribe-btn {
+        background-color: $tide;
+        border: none;
+        color: white;
+        padding: 8px;
+        @include border-radius(5px);
+        font-family: "Casper", sans-serif;
+        @include adjust-font-size-to($schedule-font-size,1,$schedule-font-size);
+
+        &:active {
+          @include box-shadow(darken($tide, 10%) 0 5px 5px 1px inset);
+        }
+      }
+    }
+  }
+
+  .right {
+    float: right;
+
+    .rss, .facebook, .twitter {
+      @include margin-trailer(0.8);
+      width: 60px;
+      height: 60px;
+      display: block;
+      position: relative;
+      .img {
+        position: absolute;
+        height: 38px;
+        width: 30px;
+      }
+
+      &:hover {
+        width: 60px;
+        height: 60px;
+        background: $hover-color;
+        @include  border-radius(30px);
+      }
+    }
+
+    .rss {
+      .img {
+        background: image-url("rss.png") no-repeat;
+        top: 12px;
+        left: 15px;
+      }
+
+      &:hover {
+        background: $tide;
+      }
+    }
+
+    .facebook {
+      .img {
+        background: image-url("f.png") no-repeat;
+        top: 12px;
+        left: 18px;
+      }
+    }
+
+    .twitter {
+      .img {
+        background: image-url("bird.png") no-repeat;
+        top: 17px;
+        left: 15px;
+      }
+    }
+  }
+
+  footer {
+    @include column(12);
+    .copyright, .terms {
+      @include adjust-font-size-to($text-font-size);
+    }
+    .copyright {
+       float: left;
+    }
+
+    .terms {
+       float: right;
+    }
+  }
+}

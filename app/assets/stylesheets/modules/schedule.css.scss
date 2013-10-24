@@ -1,68 +1,57 @@
 #schedule {
   background-color: $pale;
-  @include padding-trailer(4);
 
-  .content {
-    @include outerRow;
-    @include padding-leader;
+  header {
+    color: darken($text-color, 20%);
+  }
+  .line {
+    @include column(12);
+    font-family: 'Casper',sans-serif;
+    @include adjust-font-size-to($schedule-font-size);
+    border-bottom: 3px solid darken($green, 20%);
+    @include padding-leader(0.5);
+    @include padding-trailer(0.5);
+    color: lighten(black, 20%);
 
-    header {
-      color: darken($text-color, 20%);
-      text-align: center;
-      @include adjust-font-size-to($medium-font-size);
-      font-family: 'Sansation_Regular',sans-serif;
-      font-weight: bold;
-      @include margin-trailer;
+    &:first-of-type:hover {
+      background-color: $pale;
     }
-    .line {
-      @include column(12);
-      font-family: 'Casper',sans-serif;
-      @include adjust-font-size-to($schedule-font-size);
-      border-bottom: 3px solid darken($green, 20%);
-      @include padding-leader(0.5);
-      @include padding-trailer(0.5);
-      color: lighten(black, 20%);
 
-      &:first-of-type:hover {
-        background-color: $pale;
+    &.with-text {
+      padding: 0;
+      .header, .white { 
+        @include pie-clearfix; 
+        @include padding-trailer(0.5);
+        @include padding-leader(0.5);
       }
+      .white {
+        @include adjust-font-size-to($text-font-size, 1, $schedule-font-size);
+      }
+    }
+    &.with-text:hover {
+      .header { background-color: $green; }
+      .white { background-color: $transparent-white; }
+    }
 
-      &.with-text {
-        padding: 0;
-        .header, .white { 
-          @include pie-clearfix; 
-          @include padding-trailer(0.5);
-          @include padding-leader(0.5);
-        }
-        .white {
-          @include adjust-font-size-to($text-font-size, 1, $schedule-font-size);
-        }
-      }
-      &.with-text:hover {
-        .header { background-color: $green; }
-        .white { background-color: $light-white; }
-      }
+    &:hover {
+      background-color: $green;
+    }
+    
+    .day {
+      @include column(5);
+      color: $orange;
+      @include adjust-font-size-to($medium-font-size,2,$schedule-font-size);
+    }
 
-      &:hover {
-        background-color: $green;
-      }
-      
-      .day {
-        @include column(5);
+    .time {
+      @include column(2);
+      text-align: center;
+    }
+
+    .text {
+      @include column(5);
+      .title {
         color: $orange;
-        @include adjust-font-size-to($medium-font-size,2,$schedule-font-size);
-      }
-
-      .time {
-        @include column(2);
-        text-align: center;
-      }
-
-      .text {
-        @include column(5);
-        .title {
-          color: $orange;
-        }
       }
     }
   }
