@@ -16,6 +16,15 @@
       @include margin-trailer; 
     }
   }
+  .arrow-block, .right-text-block, .right-arrow-block, .text-block, .block, .text {
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+    }
+  }
+
   .arrow-block {
     height: 220px;
     width: 50%;
@@ -32,13 +41,9 @@
     }
 
     &:after {
-      content: "";
-      width: 0;
-      height: 0;
       border-left: 35px solid $turquoise;
       border-top: 110px solid $tide;
       border-bottom: 110px solid $tide;
-      position: absolute;
       right: 0px;
       top: 0;
     }
@@ -57,13 +62,9 @@
     text-align: left;
 
     &:after {
-      content: "";
-      width: 0;
-      height: 0;
       border-left: 35px solid $tide;
       border-top: 110px solid $turquoise;
       border-bottom: 110px solid $turquoise;
-      position: absolute;
       top: 0;
       left: 0px;
     }
@@ -78,14 +79,10 @@
     z-index: 2; 
     padding: 45px;
 
-    &:before {
-      content: "";
-      width: 0;
-      height: 0;
+    &:after {
       border-right: 35px solid $turquoise;
       border-top: 110px solid $tide;
       border-bottom: 110px solid $tide;
-      position: absolute;
       left: -35px;
       top: 0;
     }
@@ -104,13 +101,9 @@
     text-align: left;
 
     &:after {
-      content: "";
-      width: 0;
-      height: 0;
       border-right: 35px solid $tide;
       border-top: 110px solid $turquoise;
       border-bottom: 110px solid $turquoise;
-      position: absolute;
       right: 35px;
       top: 0;
     }
@@ -146,6 +139,7 @@
       }
       li {
         white-space: normal;
+        margin-left: -5px;
 
         .block {
           height: 150px;
@@ -156,9 +150,6 @@
           padding: 30px;
 
           &:after {
-            content: "";
-            width: 0;
-            height: 0;
             border-right: 113px solid $tide;
             border-left: 113px solid $tide;
             border-top: 40px solid $turquoise;
@@ -179,9 +170,6 @@
           width: 100%;
 
           &:after {
-            content: "";
-            width: 0;
-            height: 0;
             border-top: 35px solid $tide;
             border-right: 110px solid $turquoise;
             border-left: 110px solid $turquoise;
@@ -199,6 +187,7 @@
 
     li {
       height: 160px;
+      margin-left: -5px;
       .container {
         background-color: $turquoise;
         text-align: center;
@@ -214,6 +203,7 @@
 
     li {
       height: 130px;
+      margin-left: -5px;
       .container {
         background-color: $turquoise;
         text-align: center;
